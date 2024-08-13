@@ -8,9 +8,10 @@ Request Body :
 
 ```json
 {
-  "username" : "aghits",
-  "password" : "rahasia",
-  "name" : "Muhammad Aghits"
+  "username" : "test",
+  "name" : "test",
+  "name" : "test@example.com",
+  "password" : "rahasia"
 }
 ```
 
@@ -19,8 +20,9 @@ Response Body Success :
 ```json
 {
   "data" : {
-    "username" : "aghits",
-    "name" : "Muhammad Aghits"
+    "username" : "test",
+    "name" : "test",
+    "name" : "test@example.com",
   }
 }
 ```
@@ -41,7 +43,7 @@ Request Body :
 
 ```json
 {
-  "username" : "aghits",
+  "username" : "test",
   "password" : "rahasia"
 }
 ```
@@ -75,7 +77,8 @@ Request Body :
 
 ```json
 {
-  "name" : "Muhammad Aghits Lagi", // optional
+  "name" : "Muhammad Aghits", // optional
+  "email" : "aghits@example.com", // optional
   "password" : "new password" // optional
 }
 ```
@@ -85,8 +88,9 @@ Response Body Success :
 ```json
 {
   "data" : {
-    "username" : "aghits",
-    "name" : "Muhammad Aghits Lagi"
+    "username" : "test",
+    "name" : "Muhammad Aghits"
+    "email" : "aghits@example.com"
   }
 }
 ```
@@ -111,8 +115,9 @@ Response Body Success:
 ```json
 {
   "data" : {
-    "username" : "aghits",
+    "username" : "test",
     "name" : "Muhammad Aghits"
+    "email" : "aghits@example.com"
   }
 }
 ```
