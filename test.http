@@ -1,0 +1,137 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "test",
+  "name" : "test",
+  "email" : "test@example.com",
+  "password" : "rahasia"
+}
+
+### 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "test",
+  "password" : "rahasia"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+{
+  "name" : "M. Aghits Septian Alfarizi",
+  "email" : "aghits@example.com"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+###
+
+POST http://localhost:3000/api/checklists
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+{
+  "name" : "test"
+}
+
+###
+
+GET http://localhost:3000/api/checklists
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+###
+
+GET http://localhost:3000/api/checklists/72
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+### Update
+
+PUT http://localhost:3000/api/checklists/72
+Content-Type: application/json
+Accept: application/json
+Authorization: dd689394-2191-4110-8cd8-4a5192afde80
+
+{
+  "name": "Membuat Todolist API"
+}
+
+### Delete Checklist
+
+DELETE http://localhost:3000/api/checklists/72
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+### Create ChecklistItem
+
+POST http://localhost:3000/api/checklists/72/checklistItems
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+{
+  "itemName" : "test",
+  "isDone" : false
+}
+
+
+### List ChecklistItems
+
+GET http://localhost:3000/api/checklists/72/checklistItems
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+
+### Get ChecklistItem
+
+GET http://localhost:3000/api/checklists/72/checklistItems/16
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+### Update ChecklistItem
+
+PUT http://localhost:3000/api/checklists/72/checklistItems/16
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
+
+{
+  "itemName" : "Membuat Todolist Endpoint",
+  "isDone" : true
+}
+
+### Remove ChecklistItem
+
+DELETE http://localhost:3000/api/checklists/72/checklistItems/16
+Content-Type: application/json
+Accept: application/json
+Authorization: 39ea0c0f-7a71-42cd-b5bd-8717b2a2ba51
